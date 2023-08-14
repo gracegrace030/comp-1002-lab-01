@@ -5,55 +5,180 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Biography</title>
+
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Document</title>
 </head>
-<style>
-    .image-size {
-        width: 30%;
-    }
-</style>
 
-<body>
-    <header>
-        <h1>Fancy Title :P</h1>
-        <p>The story of Grace</p>
-    </header>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Coozhion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Admin
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item">Categories</a></li>
+                            <li><a class="dropdown-item">Products</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
-    <section>
-        <h2>Biography</h2>
-        <p>Hello! <em>Nice to meet you</em>!
-            <ol>
-                <li>I'm Grace from Hong Kong :))</li>
-                <li>I finished my degree in Hong Kong few years ago, and super excited to start my second schoollife in
-                    Canada!</li>
-                <li>I like create work, usually by drawing.</li>
-                <li>There is no boundries for creation, I would like to try as many as I can.</li>
-            </ol>
-        </p>
-    </section>
-
-    <section>
-        <h1>Image Section</h1>
-        <p>1. Web Photo</p>
-        <img class="image-size"
-            src="https://images.unsplash.com/photo-1627693685101-687bf0eb1222?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
-            alt="">
-        <br>Guillermo Diaz. (2021).Amigurumi version of Pikachu from Pokémon. Unsplash, <a
-            href="https://unsplash.com/photos/fs6zYhHyzvI" target="_blank">https://unsplash.com/photos/fs6zYhHyzvI</a>
-
-        <p>2. My Photo</p>
-        <img class="image-size"
-            src="https://user-images.githubusercontent.com/113151468/189501665-1b278734-26d2-4167-9e0f-4e4361561dc9.jpeg"
-            alt="">
-        <br>Yummy!
-        <p>3. GIF</p>
-        <div style="width:30%;height:0;padding-bottom:30%;position:relative;"><iframe
-                src="https://giphy.com/embed/5xtDarIHieSzSJdmn0A" width="100%" height="100%" style="position:absolute"
-                frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
-        <p>Jason Clarke.(2014). Happy Dance GIF. GIPHY, <a
-                href="https://giphy.com/gifs/jasonclarke-dog-jason-clarke-pupper-5xtDarIHieSzSJdmn0A">https://giphy.com/gifs/jasonclarke-dog-jason-clarke-pupper-5xtDarIHieSzSJdmn0A</a>
-        </p>
-    </section>
+<!--
+    <body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Color
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Photo
+                </th>
+                <th>
+                    Category
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        Description
+                    </td>
+                    <td>
+                        Color
+                    </td>
+                    <td>
+                        Price
+                    </td>
+                    <td>
+                        Quantity
+                    </td>
+                    <td>
+                        Photo
+                    </td>
+                    <td>
+                        Category Name
+                    </td>
+                    <td>
+                        <form asp-action="AddToCart">
+                            
+                                <input type="hidden" name="productId" value="@Model.Id" />
+                                <input type="hidden" name="quantity" value="1" />
+    
+                                <input type="submit" value="Quick Add" class="btn btn-primary" />
+                            
+    
+                            <a asp-action="ProductDetails" asp-route-id="@item.Id">View Product</a>
+                        </form>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
 </body>
+-->
+
+<main>
+    <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+            <div class="col">
+                <a href="" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm">
+                        <img
+                            src="https://images.unsplash.com/photo-1567016432779-094069958ea5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80"
+                            class="card-img-top" alt="product image">
+                        <div class="card-body">
+                            <div class="clearfix mb-3">
+                                <span class="float-start badge rounded-pill bg-primary"> </span>
+                                <span class="float-start badge rounded-pill bg-warning"> </span>
+                                <span class="float-start badge rounded-pill bg-danger"> </span>
+                                
+                                <span class="float-end price-hp">$ 12354.00</span>
+                            </div>
+                            <h5 class="card-title">
+                                Computer
+                            </h5>
+                            <p class="card-text">
+                                Some quick example text to build
+                            </p>
+                            <div class="text-center my-4">
+                                <a href="#" class="btn btn-primary">Quick Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm">
+                        <img
+                            src="https://images.unsplash.com/photo-1567016432779-094069958ea5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80"
+                            class="card-img-top" alt="product image">
+                        <div class="card-body">
+                            <div class="clearfix mb-3">
+                                <span class="float-start badge rounded-pill bg-primary"> </span>
+                                <span class="float-start badge rounded-pill bg-warning"> </span>
+                                <span class="float-start badge rounded-pill bg-danger"> </span>
+                                
+                                <span class="float-end price-hp">$ 12354.00</span>
+                            </div>
+                            <h5 class="card-title">
+                                Computer
+                            </h5>
+                            <p class="card-text">
+                                Some quick example text to build
+                            </p>
+                            <div class="text-center my-4">
+                                <a href="#" class="btn btn-primary">Quick Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+
 
 </html>
